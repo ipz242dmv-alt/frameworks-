@@ -174,7 +174,7 @@ final class LogController extends AbstractController
     {
         $body = json_decode($request->getContent(), true);
 
-        if (json_last_error() !== JSON_ERROR NONE) {
+        if (json_last_error() !== JSON_ERROR_NONE) {
             return $this->json(
                 ['error' => 'Invalid JSON payload.'],
                 Response::HTTP_BAD_REQUEST
